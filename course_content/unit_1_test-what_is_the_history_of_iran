@@ -1,0 +1,37 @@
+Unit_name: Unit 1 test
+Page_name: What is the history of Iran?
+
+1. Which package in Go provides basic synchronization primitives in Go?
+
+    A) `fmt` package
+    - Incorrect. The `fmt` package is primarily used for formatting strings for console output. It doesn't provide any synchronization primitives.
+  
+    B) `net` package
+    - Incorrect. The `net` package provides a portable interface for network I/O, including TCP/IP, UDP, domain name resolution, and Unix domain sockets. It does not provide synchronization primitives.
+
+    C) `sync` package
+    - Correct. `sync` package provides basic synchronization primitives such as WaitGroups, Mutexes and Cond. It doesn't provide any I/O functionality.
+
+
+2. How do you start a function execution in a new goroutine in Go language?
+
+    A) Wrap the function in `func()`
+    - Incorrect. Wrapping the function inside `func()` just defines a new anonymous function. It does not start the function execution in a new goroutine.
+  
+    B) Prepend `go` keyword before the function call
+    - Correct. Prepending `go` before a function call starts the function's execution in a new goroutine.
+
+    C) Call `new(func())`
+    - Incorrect. `new(func())` would try to initialize a new instance of a function, which is not a correct syntax in Go.
+
+
+3. What happens when you send data on an unbuffered channel in Go?
+
+    A) It blocks the sender goroutine until the data is received by another goroutine from the channel.
+    - Correct. When you send data using an unbuffered channel, it blocks the sending goroutine until another goroutine receives the data from the channel.
+
+    B) It blocks the sender goroutine indefinitely until manually unblocked.
+    - Incorrect. It doesn't block indefinitely. It only blocks until the data is received from the channel by another goroutine or the channel is closed.
+
+    C) The data is sent immediately without blocking the sender goroutine.
+    - Incorrect. In an unbuffered channel, the sender goroutine is blocked until the data is received from the channel by another goroutine.
