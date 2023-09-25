@@ -10,10 +10,10 @@ unit_1:
   page_1:
     page_name: What is the history of Iran?
     skills:
-      - Understand the different empires of Iran
+      - "Understand the different empires: Iran"
 unit_2:
   unit_name: Unit 2 test
   page_1:
     page_name: What is the history of Sweden?
     skills:
-      - Understand the different empires of Sweden
+      - "Understand the different empires: Sweden"
