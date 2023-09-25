@@ -1,0 +1,83 @@
+Unit_name: Intro to Golang & Basic Concurrency
+Page_name: How is Go different from Java?
+
+1. Which of these is a key difference in terminology between Go and Java?
+    A) Java has a less complex syntax than Go.
+    - Incorrect. Go's syntax is actually designed to be less complex and more readable than Java's.
+    B) Go employs threads similar to Java for concurrent programming.
+    - Incorrect. Java uses threads for concurrent programming, whereas Go uses a different concept called goroutines, which tends to be more lightweight and efficient.
+    C) Go exhibits some characteristics of dynamic typing, despite being statically typed.
+    - Correct. Although Go is statically typed like Java, it shows behaviour reminiscent of dynamically typed languages.
+
+2. Which strategy does Go adopt for fault handling compared to Java?
+    A) Go handles exceptions via try-catch blocks same as Java.
+    - Incorrect. Go does not favour try-catch blocks for exception handling; instead, it depends on return values.
+    B) Go does not concern itself with fault handling.
+    - Incorrect. Go indeed takes care of error handling, but unlike Java, it does so by relying on return values.
+    C) Go uses return values to handle faults, unlike traditional try-catch in Java.
+    - Correct. Go differs from Java by channelling error handling through return values rather than using try-catch blocks.
+
+3. In respect to object-oriented programming, what does Java incorporate that Go does not?
+    A) Inheritance.
+    - Correct. Unlike Java, Go does not have the traditional concept of inheritance, a usual mechanism in object-oriented programming.
+    B) Interfaces.
+    - Incorrect. While Go and Java use interfaces differently, both languages support these constructs.
+    C) Functions.
+    - Incorrect. Both Java and Go have the concept of functions.
+
+4. How does concurrent programming in Go compare to Java?
+    A) Both Go and Java use goroutines for concurrent programming.
+    - Incorrect. Go utilises goroutines for concurrent programming, while Java employs threads.
+    B) Go deploys goroutines, which are less resource-intensive than Java's threads.
+    - Correct. Compared to Java's threading mechanism, Go's goroutines are more lightweight and typically more efficient.
+    C) Go follows Java and uses threads for concurrent processing.
+    - Incorrect. While Java uses threads, Go uses a different concept called goroutines.
+
+5. In terms of type systems, how does Java stand in relation to Go?
+    A) Java is a dynamic language.
+    - Incorrect. Java, like Go, is a statically typed language.
+    B) Java uses static typing and exhibits no dynamic behaviour.
+    - Correct. Java is a statically typed language and does not show the dynamic behaviour observed in Go.
+    C) Java and Go's type systems are interchangeable.
+    - Incorrect. Java and Go have fundamentally different type systems.
+
+6. In comparison to Java strings, what makes Go strings more efficient?
+    A) Strings in Go are mutable.
+    - Incorrect. Both Go and Java strings are immutable, but Go strings tend to be more efficient in memory usage.
+    B) Go strings are not constant.
+    - Incorrect. Like Java, Go strings are immutable, but Go strings win in terms of memory efficiency.
+    C) Go strings have better memory efficiency.
+    - Correct. Compared to Java strings, Go strings are more memory-efficient, partly due to their simplicity and the memory management scheme in Go.
+
+7. How does Go approach object-oriented programming differently from Java?
+    A) Go uses classes and inheritance like Java.
+    - Incorrect. Go does not follow Java's technique of using classes and inheritance; it instead relies on structs and interfaces.
+    B) Go does not conform to object-oriented design.
+    - Incorrect. While Go does not strictly follow the conventional object-oriented paradigm, it supports this model via structs and interfaces.
+    C) In Go, structs and interfaces replace classes and inheritance.
+    - Correct. For object-oriented design, Go employs structs and interfaces instead of classes and inheritance used in Java.
+
+8. How can Go's simplicity be both an advantage and a drawback compared to Java?
+
+    A) It leads to less understandable code.
+    - Incorrect. Go aims to simplify syntax to improve code readability, whereas Java may seem more complex to newcomers.
+    B) It permits a lower learning curve and faster development but may lack some complex features.
+    - Correct. The simplicity of Go can expedite development and make learning easier, but it might lack some features when it comes to complex programming needs, compared to Java.
+    C) It allows Go to solve more intricate problems.
+    - Incorrect. Go's simplicity does not necessarily mean it can handle more complex problems compared to Java.
+
+9. How do the concurrency mechanisms of Go and Java compare?
+    A) Java's threading is lighter than Go's goroutines.
+    - Incorrect. Go's goroutines are more lightweight and efficient than Java's threads.
+    B) Go's goroutines are heavier than Java's threads.
+    - Incorrect. Go employs goroutines for concurrency, which are more lightweight and resource-efficient than Java's threads.
+    C) Go's goroutines are lighter than Java's threads.
+    - Correct. Go's goroutines are generally more lightweight and efficient than Java's threads.
+
+10. Identify the incorrect statement about Go and Java's object-oriented programming.
+    A) Go incorporates structs in place of classes employed in Java.
+    - Correct. This is the incorrect statement. Java uses classes while Go utilises structs, but the use of structs in Go is not directly equivalent to using classes in Java.
+    B) Both Go and Java utilise an object-oriented approach to programming.
+    - Incorrect. Both languages allow object-oriented programming, albeit in different manners.
+    C) Go uses interfaces to emulate a form of inheritance.
+    - Incorrect. Go doesn't support traditional inheritance as seen in Java, but it provides similar functionality using interfaces.
