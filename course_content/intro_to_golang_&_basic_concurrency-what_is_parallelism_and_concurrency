@@ -58,4 +58,115 @@ Page_name: What is parallelism and concurrency?
     - Incorrect. This isn't a common misconception but actually a misunderstanding. Go's channels allow only one goroutine to access the data at any given time for safety.
     
     C) Channels are not needed for communication between goroutines
-    - Incorrect. This also represents a misunderstanding. Channels are fundamental in Go, enabling safe communication between goroutines in concurrent programming.
+    - Incorrect. This also represents a misunderstanding. Channels are fundamental in Go, enabling safe communication between goroutines in concurrent programming.Unit_name: Intro to Golang & Basic Concurrency
+Page_name: What is parallelism and concurrency?
+
+1. Imagine your program has several operations to execute and each operation is dependent on the previous operation's result. Which type of execution best fits this scenario?
+    
+    A) Concurrent execution
+    - Incorrect. While concurrent execution can handle tasks independently, it doesn't necessarily wait for the result of the previous operation before beginning a new one.
+  
+    B) Parallel execution
+    - Incorrect. Parallel execution also doesn't inherently wait for the result of the previous operation before starting a new one.
+    
+    C) Sequential execution
+    - Correct. Sequential execution is suitable for dependent operations as each operation executes one after the other.
+    
+2. What is the primary mechanism Go uses to achieve concurrency?
+
+    A) The parallel keyword.
+    - Incorrect. There is no 'parallel' keyword in Go. Concurrency is achieved using a different mechanism.
+  
+    B) Goroutines
+    - Correct. Concurrency is mainly achieved in Go using goroutines.
+    
+    C) The sequence function
+    - Incorrect. The sequence function does not exist in Go and it is not used to achieve concurrency.
+   
+3. What does parallel execution mean in the context of programming?
+
+    A) Task execution in sequence
+    - Incorrect. Executing tasks in sequence is known as sequential execution, not parallel execution.
+  
+    B) Tasks running simultaneously on different processors
+    - Correct. Parallel execution involves running tasks simultaneously on different processors or cores.
+    
+    C) Task execution at random times, without any particular order
+    - Incorrect. This option seems to describe a nondeterministic execution order, but it doesn't accurately describe parallel execution.
+
+4. In the given code snippet: `func main() { go fmt.Println("Hello, world") }`, what type of execution does the 'go' command promote?
+
+    A) Parallel execution
+    - Incorrect. Although this might execute in parallel depending on the GOMAXPROCS value, the 'go' keyword does not guarantee parallel execution.
+    
+    B) Sequential execution
+    - Incorrect. The 'go' keyword isn't used for promoting sequential execution. In this code, it starts a goroutine.
+    
+    C) Concurrent execution
+    - Correct. The 'go' keyword is used to start a goroutine, demonstrating concurrent execution.
+
+5. If you have a task that does not require the result of another task to begin execution, and you want to optimize this in Go, which technique would you use?
+
+    A) Sequential programming
+    - Incorrect. Sequential programming doesn't optimize speed in this case, since tasks are executed one after another.
+
+    B) Goroutines and channels
+    - Correct. Goroutines allow for concurrent execution of tasks. Channels can be used to communicate between these tasks if needed.
+    
+    C) Use multiple threads
+    - Incorrect. While using multiple threads can potentially speed up execution, Go encourages the use of goroutines and channels for such tasks.
+
+6. When working with goroutines in Go, what should you be cautious about related to the sequence of execution?
+
+    A) Goroutines always execute in the order they are declared.
+    - Incorrect. Goroutines do not always execute in the order they are declared. The execution order of goroutines is not deterministic.
+    
+    B) Goroutines must be declared inside the main function.
+    - Incorrect. Goroutines can be declared outside of the main function. This answer does not relate to the sequence of execution.
+    
+    C) The sequence of goroutine execution is not guaranteed.
+    - Correct. The sequence of execution of goroutines is not deterministic, and it should not be relied upon for program correctness.
+
+7. Given this line of code: `go calcSum(5, 10)`, what type of operation does this line demonstrate?
+
+    A) Sequential execution
+    - Incorrect. This line of code doesn't illustrate sequential execution; instead, it demonstrates a different concept.
+
+    B) Concurrent execution
+    - Correct. "go" is used to launch new goroutines, demonstrating concurrent execution.
+    
+    C) Parallel execution
+    - Incorrect. Although goroutines sometimes may execute in parallel, this line of code does not definitively demonstrate parallel execution.
+
+8. You are using a quad-core machine, and you set GOMAXPROCS to 2. How does this impact the execution of your Go program?
+
+    A) The program uses 4 cores always.
+    - Incorrect. The GOMAXPROCS value determines the number of CPUs that can be executing simultaneously. It's not set to utilize all the cores in this case.
+
+    B) The program can execute two goroutines simultaneously at most.
+    - Correct. By setting GOMAXPROCS to 2, you limit your program to parallel executing on two cores, so only two goroutines can potentially execute simultaneously.
+
+    C) The program runs sequentially, ignoring the core count.
+    - Incorrect. Changing the GOMAXPROCS value does not revert the program to a sequential execution. It just affects the maximum number of CPUs that a Go program can use simultaneously.
+
+9. In Go, what purpose does the 'go' keyword serve?
+
+    A) It signifies the end of a function.
+    - Incorrect. The 'go' keyword doesn't signify the end of a function. It has a different purpose.
+    
+    B) It launches new goroutines.
+    - Correct. The 'go' keyword is used to launch new goroutines.
+
+    C) It defines a new function.
+    - Incorrect. The 'go' keyword doesn't define a new function. Its purpose is different.
+
+10. If a spawned goroutine is still executing after the `main` goroutine has finished, what happens to the execution of the still-running goroutine?
+
+    A) The running goroutine finishes its execution.
+    - Incorrect. If the main goroutine exits, all other existing goroutines, regardless of their state, are abruptly stopped.
+
+    B) The running goroutine is immediately stopped.
+    - Correct. If the main goroutine exits, all other existing goroutines are immediately stopped.
+
+    C) The running goroutine executes for a predetermined time before it stops.
+    - Incorrect. A spawned goroutine does not continue to run for a set time after the main goroutine exits; it is immediately stopped.
