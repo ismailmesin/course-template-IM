@@ -1,0 +1,61 @@
+Unit_name: Intro to Golang & Basic Concurrency
+Page_name: What is parallelism and concurrency?
+
+1. In the context of Go programming, what is an example of achieving concurrency?
+
+    A) Multiple lines of code executing together, but not necessarily at the same time.
+    - Correct. Concurrency in Go can often take the form of multiple code lines executing together, but may not necessarily complete at the same exact time.
+  
+    B) Many computations running simultaneously.
+    - Incorrect. Your description aligns more with parallelism, which is concurrent but also involves computations happening at the exact same time.
+    
+    C) Sequential order of executing commands.
+    - Incorrect. Sequential command execution is part of a sequential programming approach, not concurrency.
+
+
+2. Which of the following is not a method of achieving concurrency in Go?
+
+    A) Utilizing Goroutines to manage multiple computations
+    - Incorrect. Goroutines are crucial for managing multiple computations concurrently in Go.
+  
+    B) Relying on global variables
+    - Correct. Global variables are not recommended to achieve concurrency and can lead to issues like shared mutable state and race conditions.
+    
+    C) Establishing channels for safe communication between Goroutines
+    - Incorrect. Channels are a fundamental part of achieving safe communication between Goroutines in concurrent Go programming.
+
+
+3. Exploring the speed of execution, what can we say about sequential and concurrent programming in Go?
+
+    A) Sequential programming generally executes faster due to each command running one at a time 
+    - Incorrect. While sequential programming executes one command at a time, it does not necessarily mean it's faster. Concurrency in Go can execute different parts of a program at the same or in overlapping time enhancing speed.
+    
+    B) Concurrent programming often executes tasks faster by allowing different parts of the program to run at the same or overlapping time
+    - Correct. Concurrency in Go can potentially speed up execution time by enabling multitasking within the program.
+    
+    C) It depends on the nature of the task
+    - Incorrect. Although task nature can be a factor, it's important to note that concurrency generally enhances execution speed as tasks can run simultaneously or in overlapping time.
+
+
+4. When using `go foo()`, how should we understand what can `foo` be?
+
+    A) Only built-in Go functions
+    - Incorrect. Go's concurrency allows any function, not just built-in ones, to run concurrently with others.
+  
+    B) Any function, including those which call other functions
+    - Correct. Go's goroutines enable any functions to run concurrently. This can include functions that call other functions.
+    
+    C) Any function that doesn't deal with errors
+    - Incorrect. Error handling doesn't determine whether a function can run concurrently or not. Any function can be invoked concurrently in Go.
+
+
+5. Regarding Go's channel usage for safe communication in concurrent programming, which is a common misconception?
+
+    A) Only one goroutine has access to a channel at a time
+    - Correct. A common misconception is that multiple goroutines can access a channel simultaneously. In fact, channels provide a way for one goroutine to safely share data with another goroutine, one at a time.
+  
+    B) Multiple goroutines can read/write to a single channel simultaneously
+    - Incorrect. This isn't a common misconception but actually a misunderstanding. Go's channels allow only one goroutine to access the data at any given time for safety.
+    
+    C) Channels are not needed for communication between goroutines
+    - Incorrect. This also represents a misunderstanding. Channels are fundamental in Go, enabling safe communication between goroutines in concurrent programming.
