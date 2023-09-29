@@ -1,0 +1,28 @@
+Unit_name: Unit 1 test
+Page_name: What is JavaScript and React?
+
+Question 1: What does the ‘go’ keyword do in Go programming language?
+    A) Stops the execution of the current function
+    - Incorrect. The 'go' keyword does not stop execution. Instead, it has a special role in managing function behavior.
+    B) Serializes the execution of functions
+    - Incorrect. The 'go' keyword does not serialize function execution, which implies a specific chronological order of execution.
+    C) Starts a new goroutine
+    - Correct. The 'go' keyword in Go is used to start a new goroutine, letting a function run independently alongside other functions.
+
+Question 2: What is a goroutine in Go programming language?
+    A) It’s an equivalent of a thread in other languages like Java or Python
+    - Incorrect. While similar in purpose, goroutines are not exactly equivalent to threads. They serve a comparable function but operate differently.
+    B) It's a unique concept in Go for error handling 
+    - Incorrect. Goroutines are not specific to error handling, although they can be used in conjunction with error handling logic.
+    C) It’s a lightweight thread managed by the Go runtime
+    - Correct. A goroutine is a lightweight thread managed by the Go runtime, which can run simultaneously with other goroutines.
+
+Question 3: Which of the following is the correct syntax to write a select statement in Go?
+    A) "select { case <-chan1: fun1() case var2 := <-chan2: fun2(var2) }"
+    - Incorrect. The indicated syntax lacks proper indentation and formatting, which is important for readability in Go.
+    B)  "switch { case <-chan1: fun1() case var2 := <-chan2: fun2(var2) }"
+    - Incorrect. This statement uses the switch keyword instead of select, which makes it a switch case statement not a select statement.
+    C) "select { case <-chan1: fun1() case var2 <-chan2: fun2(var2) }"
+    - Correct. This is the correct syntax to write a select statement in concurrent programming with Go.
+
+Continue creating them similarly, keeping the subject and topic in perspective, including code snippets where needed, and focusing on misconceptions.
