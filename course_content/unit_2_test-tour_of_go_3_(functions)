@@ -1,1 +1,242 @@
-REQUEST FAILED
+REQUEST FAILEDUnit_name: Unit 2 test
+Page_name: Tour of Go 3 (Functions)
+
+1. Consider the following signatures. Which is a valid function definition in Go?
+
+    A) `define functionName(arg int) int`
+    - Incorrect. There is not keyword `define` in Go to declare a function.
+  
+    B) `function functionName(arg: int): int`
+    - Incorrect. JavaScript-like function definition is not valid Go syntax.
+   
+    C)  `func functionName(arg int) int`
+    - Correct. This is the correct signature of a function in Go.
+
+2. In Go programming, which function is automatically called when a program is executed?
+
+    A) `execute`
+    - Incorrect. The function `execute` isn't something inherently special within Go. 
+  
+    B) `main`
+    - Correct. The `main` function is indeed the entry point of a Go program.
+   
+    C)  `init`
+    - Incorrect. While `init` functions are automatically executed, they are called before `main`.
+
+3. Consider the following function definition in Go language. What does it signify?
+`func Divide(dividend, divisor int) (quotient int, remainder int)`
+   
+    A) A function that takes two float values and returns two integer values.
+    - Incorrect. The function accepts two integer parameters, not float values.
+   
+    B) A function that takes two integer values and returns two integer values.
+    - Correct. Correct, this function accepts two integers and returns two integers.
+   
+    C) A function that takes four integer values and returns no values.
+    - Incorrect. The function accepts two integers and returns two integers, not four.
+
+4. Which of the following statement is true about a function in Go?
+
+    A) A function in Go can't return multiple values.
+    - Incorrect. Unlike some languages, Go allows a function to return multiple values.
+  
+    B) A function in Go can return multiple values, with any number of return values.
+    - Correct. This is a unique feature in Go. Functions can return any number of values.
+
+    C) A function in Go can return multiple values, but only two.
+    - Incorrect. There's no such limitation in Go about returning only two values from a function.
+
+5. How can you define a function in Go that accepts a slice of integers?
+
+    A) `function FuncName(arg []int)`
+    - Incorrect. The `function` keyword is not valid Go syntax for defining functions.
+  
+    B) `func FuncName(arg []int)`
+    - Correct. This is how you define a function with an argument of type slice of integers in Go.
+  
+    C) `def FuncName(arg []int)`
+    - Incorrect. The keyword `def` is not valid Go syntax for defining functions.
+
+6. How does Go handle named return parameters in a function?
+
+    A) In Go, if return parameters are named, they must be explicitly returned.
+    - Incorrect. This isn't true. If you name return parameters, you can simply use a `return` statement with no arguments.
+  
+    B) In Go, named return parameters can be returned using a `return` statement with no arguments.
+    - Correct. Named return parameters can be implicitly returned, this is why a `return` statement with no arguments is allowed when using named return parameters.
+  
+    C) In Go, the behavior of returning parameters depends on the function.
+    - Incorrect. No matter the function, Go allows named return parameters to be returned using a `return` statement with no arguments.
+
+7. Given the need to write a function that can return an integer and a boolean, how would you declare this function?
+
+    A) `func functionName() (int, boolean)`
+    - Incorrect. Go uses `bool` not `boolean`.
+  
+    B) `func functionName() (int, bool)`
+    - Correct. This is the correct syntax when declaring a function that can return an integer and a boolean in Go.
+   
+    C) `def functionName() -> (int, bool)`
+    - Incorrect. The `def` and arrow symbol `->` are not used in Go functions.
+
+8. Which of the following syntax indicates a function with no arguments in Go?
+
+    A) `functionName()`
+    - Correct. A function with no arguments in Go is written as `functionName()`.
+  
+    B) `functionName(noargs)`
+    - Incorrect. `noargs` is not a recognised keyword in Go to signify a function with no arguments.
+  
+    C) `functionName(empty)`
+    - Incorrect. There is no declared keyword `empty` in Go to signify a function having no arguments.
+
+9. In a function declaration in Go, what is the order of parameters and return types?
+
+    A) Parameters first, then return types.
+    - Correct. In Go, parameters are declared before the return types in function signatures.
+  
+    B) Return types first, then parameters.
+    - Incorrect. Return types are declared after the parameters in Go function signatures.
+   
+    C) Parameters and return types can be declared in any order.
+    - Incorrect. In Go, parameters must be declared before the return types in function signatures.
+
+10. Think about passing an array as an argument to a function in Go. Is that possible?
+
+    A) No, unlike some languages, you cannot pass arrays in Go.
+    - Incorrect. Arrays can be passed as arguments in Go.
+  
+    B) Yes, an array can definitely be passed to a function in Go.
+    - Correct. Similar to many other languages, Go also allows arrays to be passed to functions.
+  
+    C) In Go, you can only pass slices and not raw arrays.
+    - Incorrect. Go allows both arrays and slices as function arguments.
+
+1. What is the primary advantage of using a variadic function in the Go language?
+
+    A) Enables a function to accept any number of parameters of the same type
+    - Correct. Variadic functions provide flexibility to pass any number of arguments of the same type.
+
+    B) Allows a function to accept a variety of parameter types
+    - Incorrect. Variadic functions allow for multiple parameters, but these parameters must all be of the same type.
+
+    C) To pass entire a slice or array as multiple arguments to a function
+    - Incorrect. While variadic functions in Go do allow a slice parameters by appending `...` to the slice, the main advantage is the flexibility of passing any number of parameters of the same type.
+
+
+2. Consider the following three function declarations. Which one correctly defines a variadic function that accepts potentially multiple integers?
+
+    A) `func sum(nums ...int) {}`
+    - Correct. The ellipsis `...` is placed correctly before the type, which allows the function to accept any number of integer parameters.
+
+    B) `func sum(nums int...) {}`
+    - Incorrect. In Go, the ellipsis precedes the type, not follows it. The correct form is `...type`.
+
+    C) `func sum(...nums int) {}`
+    - Incorrect. It's key that the ellipsis precedes the type, not the parameter name. Hence, `nums ...int` would be correct.
+
+
+3. Given that you have a slice of integers, how can you pass it to a variadic function?
+
+    A) Directly pass the slice as an argument to the function
+    - Incorrect. If you directly pass the slice, Go will consider it as a single argument of slice type which may cause a type mismatch error.
+
+    B) Pass the slice with `...` operator applied after it
+    - Correct. This is the correct method to pass a slice to a variadic function. For example, `functionName(slice...)`.
+
+    C) The slice must be converted to an array first
+    - Incorrect. You don't need to convert a slice into an array before you pass it to a variadic function. It's the `...` operator that makes the magic.
+
+
+4. How many variadic parameters can a variadic function in Go have?
+
+    A) A variadic function can have multiple variadic parameters
+    - Incorrect. A variadic function in Go can only have a single variadic parameter.
+
+    B) A variadic function can only have a single variadic parameter
+    - Correct. Indeed, a variadic function can only have one variadic parameter.
+
+    C) A variadic function can have one variadic parameter per type
+    - Incorrect. This suggests there can be multiple variadic parameters which is incorrect - Go only allows one, irrespective of the type.
+
+
+5. Is it possible for a variadic function to also include non-variadic parameters?
+
+    A) Yes, but the variadic parameter must be the last one in the list
+    - Correct. A variadic function can include non-variadic parameters but the variadic parameter must be last in the function declaration.
+
+    B) No, a variadic function can only take a variadic parameter
+    - Incorrect. It's completely fine to mix variadic and non-variadic parameters, as long as the variadic one is last.
+
+    C) Yes, but the non-variadic parameters have to be of a different type than the variadic parameter
+    - Incorrect. The type of non-variadic parameters has no Impact on variadic parameters. The only restriction is the position of the variadic parameter.
+
+
+6. How are the values of a variadic parameter accessed within the function?
+
+    A) As a list of arguments
+    - Incorrect. Go does not have a data type called list. Inside the function, variadic parameters are treated as a slice of the given type.
+
+    B) As an array of arguments
+    - Incorrect. Even though arrays are available in Go, inside the function, variadic parameters are actually treated as a slice.
+
+    C) As a slice of arguments 
+    - Correct. When inside the function, the variadic parameter’s elements can be accessed just like a slice’s.
+
+
+7. Consider the following function:
+```
+func add(numbers ...int) int {
+    total := 0
+    for _, num := range numbers {
+        total += num
+    }
+    return total
+}
+```
+What is wrong with the function?
+
+    A) The function should not return a value
+    - Incorrect. It is totally fine for this function to return a sum. There is no such restriction that variadic functions can't return a value.
+
+    B) The function is not wrong; it is correctly defined
+    - Correct. There's nothing wrong with the function. It is a valid definition of a function that sums up an unknown number of integer parameters.
+
+    C) The `total` variable should be of a different type
+    - Incorrect. `total` being of type integer is perfectly fine given that it's a sum of integers.
+
+
+8. Given a variadic function `func add(...int)`, how would you call it with arguments 1, 2, and 3?
+
+    A) `add[1, 2, 3]`
+    - Incorrect. Function arguments in Go are passed inside round brackets, not square brackets.
+
+    B) `add{1, 2, 3}`
+    - Incorrect. Curly braces are used to denote code blocks or composite literals, not to pass arguments to a function in Go.
+
+    C) `add(1, 2, 3)`
+    - Correct. This is the correct syntax to call a function, variadic or not. Each argument is separated by a comma.
+
+
+9. What happens when a slice is passed to a variadic function with the `...` operator?
+
+    A) The function receives the entire slice as a single parameter
+    - Incorrect. When appending `...` to a slice while calling a variadic function, the function receives each element of the slice as a separate argument.
+
+    B) The slice gets converted to an array, and then passed to the function
+    - Incorrect. The `...` operator directly segregates the slice elements into separate arguments. There is no need for conversion to an array.
+
+    C) Each element of the slice is passed as a separate argument to the function
+    - Correct. With the `...` operator, each slice element is passed as an individual argument to the function.
+
+
+10. How does Go treat the variadic parameter inside the function?
+
+    A) Multiple individual parameters
+    - Incorrect. Despite the function potentially being called with multiple individual arguments, inside the function itself, these are treated as a single slice.
+
+    B) A slice of values
+    - Correct. Inside the function, all of the variable arguments are available as a slice, which allows easy access and manipulation.
+
+    C) Automatically converts them to a list 
+    - Incorrect. There's no such automatic conversion to a list. Go doesn't have a data type named list, instead it treats the parameter as a slice.
